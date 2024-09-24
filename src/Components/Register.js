@@ -33,7 +33,7 @@ const Register = () => {
         backgroundImage: `url('https://img.freepik.com/free-vector/gradient-glassmorphing-background_23-2149446713.jpg')`,
       }}
     >
-      <div className="bg-orange-500 bg-opacity-30 rounded-lg shadow-lg max-w-md w-full p-4 mt-10">
+      <div className="bg-orange-500 bg-opacity-30 rounded-lg shadow-lg max-w-md w-full p-4 mt-15">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-6">Create Your Account</h1>
         <p className="text-center text-red-900 mb-4 font-bold text-1xl">
           Join us today! Please fill in the details below to register.
