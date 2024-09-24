@@ -9,6 +9,7 @@ import Register from './Components/Register';
 import Footer from './Components/Footer';
 import Apply from './Components/Apply'; 
 
+
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -68,7 +69,7 @@ const App = () => {
         </nav>
 
         
-        <div className="flex-grow container mx-auto px-4 sm:px-6 md:px-8 bg-white bg-opacity-80 w-full m-20">
+        <div className="flex-grow container mx-auto px-4 sm:px-6 md:px-8  bg-opacity-60 w-full m-20">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/loan-types" element={<LoanTypes />} />

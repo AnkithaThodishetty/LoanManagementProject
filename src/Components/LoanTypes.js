@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const loanData = [
-  { type: 'Personal Loan', imgUrl: 'https://financialit.net/sites/default/files/personal-loans.jpg  ' },
+  { type: 'Personal Loan', imgUrl: 'https://financialit.net/sites/default/files/personal-loans.jpg' },
   { type: 'Home Loan', imgUrl: 'https://www.sobha.com/blog/wp-content/uploads/2023/02/Home-loan-process-step-by-step-guide-get-home-loan-800x533.jpg' },
   { type: 'Car Loan', imgUrl: 'https://s3-eu-west-1.amazonaws.com/sandhurst-templatewebsites/1a5b3e4b-b587-4903-9ae1-af4cb480ae5a.jpg' },
   { type: 'Education Loan', imgUrl: 'https://www.wemakescholars.com/images/background-design/education-loan-emi-cal.png' },
@@ -14,12 +14,26 @@ const loanData = [
 ];
 
 const LoanTypes = () => {
+  const [jumpedCard, setJumpedCard] = useState(null); 
+
+  const handleJump = (index) => {
+    setJumpedCard(index); 
+    setTimeout(() => {
+      setJumpedCard(null); 
+    }, 300); 
+  };
+
   return (
-    <section className= "py-12 px-6 bg-gray-600">
-      <h3 className="text-2xl font-bold mb-8 text-center">Explore Our Loan Options</h3>
+    <section className="py-12 px-6 bg-gray-700">
+      <h3 className="text-2xl font-bold mb-8 text-center text-white">Explore Our Loan Options</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {loanData.map((loan, index) => (
-          <div key={index} className="bg-white p-4 shadow rounded text-center">
+          <div
+            key={index}
+            className={`bg-white p-4 shadow rounded text-center transition-transform duration-300 ${jumpedCard === index ? 'transform -translate-y-8' : ''}`}
+            onClick={() => handleJump(index)} 
+            onTouchStart={() => handleJump(index)} 
+          >
             <img src={loan.imgUrl} alt={loan.type} className="mb-4 w-full h-48 object-cover rounded" />
             <h4 className="font-bold text-lg mb-2">{loan.type}</h4>
             <Link to={`/loan-types/${loan.type.toLowerCase().replace(/\s/g, '-')}`} className="text-green-800 underline">
