@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/LoanManagementProject/static/css/main.e6d3cb3c.css",
+    "main.js": "/LoanManagementProject/static/js/main.3458a160.js",
+    "static/js/453.64512fd7.chunk.js": "/LoanManagementProject/static/js/453.64512fd7.chunk.js",
+    "index.html": "/LoanManagementProject/index.html",
+    "main.e6d3cb3c.css.map": "/LoanManagementProject/static/css/main.e6d3cb3c.css.map",
+    "main.3458a160.js.map": "/LoanManagementProject/static/js/main.3458a160.js.map",
+    "453.64512fd7.chunk.js.map": "/LoanManagementProject/static/js/453.64512fd7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6d3cb3c.css",
+    "static/js/main.3458a160.js"
+  ]
+}
